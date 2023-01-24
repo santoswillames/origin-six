@@ -29,3 +29,17 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scroll");
   }
 });
+
+// Testimonials slider - swiper
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  mousewheel: true,
+  slidesPerView: 1,
+  keyboard: true,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+});

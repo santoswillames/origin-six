@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OriginSix</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="assets/fonts/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -130,72 +135,78 @@
       <div class="divider-1"></div>
 
       <section class="section" id="testimonials">
-        <div class="container grid">
+        <div class="container">
           <header>
             <h2 class="title">Depoimentos de quem já passou por aqui</h2>
           </header>
-          <div class="tetimonails">
-            <div class="testimony">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
-                  eligendi iste placeat fugit provident, est perferendis dolore,
-                  dolorum ipsa quasi, accusantium libero incidunt. Esse, iure
-                  officia. Provident reprehenderit quisquam dolores!
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/women/92.jpg"
-                    alt="Foto de Wanessa da Mata"
-                  />
-                  Wanessa da Mata
-                </cite>
-              </blockquote>
-            </div>
+          <div class="tetimonails swiper">
+            <div class="swiper-wrapper">
+              <div class="testimony swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Nisi eligendi iste placeat fugit provident, est perferendis
+                    dolore, dolorum ipsa quasi, accusantium libero incidunt.
+                    Esse, iure officia. Provident reprehenderit quisquam
+                    dolores!
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/92.jpg"
+                      alt="Foto de Wanessa da Mata"
+                    />
+                    Wanessa da Mata
+                  </cite>
+                </blockquote>
+              </div>
 
-            <div class="testimony">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
-                  eligendi iste placeat fugit provident, est perferendis dolore,
-                  dolorum ipsa quasi, accusantium libero incidunt. Esse, iure
-                  officia. Provident reprehenderit quisquam dolores!
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/men/5.jpg"
-                    alt="Foto de Ayrton Senna"
-                  />
-                  Ayrton Senna
-                </cite>
-              </blockquote>
-            </div>
+              <div class="testimony swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Nisi eligendi iste placeat fugit provident, est perferendis
+                    dolore, dolorum ipsa quasi, accusantium libero incidunt.
+                    Esse, iure officia. Provident reprehenderit quisquam
+                    dolores!
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/men/5.jpg"
+                      alt="Foto de Ayrton Senna"
+                    />
+                    Ayrton Senna
+                  </cite>
+                </blockquote>
+              </div>
 
-            <div class="testimony">
-              <blockquote>
-                <p>
-                  <span>&ldquo;</span>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
-                  eligendi iste placeat fugit provident, est perferendis dolore,
-                  dolorum ipsa quasi, accusantium libero incidunt. Esse, iure
-                  officia. Provident reprehenderit quisquam dolores!
-                </p>
-                <cite>
-                  <img
-                    src="https://randomuser.me/api/portraits/women/88.jpg"
-                    alt="Foto de Daine dos Santos"
-                  />
-                  Daine dos Santos
-                </cite>
-              </blockquote>
+              <div class="testimony swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Nisi eligendi iste placeat fugit provident, est perferendis
+                    dolore, dolorum ipsa quasi, accusantium libero incidunt.
+                    Esse, iure officia. Provident reprehenderit quisquam
+                    dolores!
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/88.jpg"
+                      alt="Foto de Daine dos Santos"
+                    />
+                    Daine dos Santos
+                  </cite>
+                </blockquote>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
