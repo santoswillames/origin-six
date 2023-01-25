@@ -1,8 +1,6 @@
 const nav = document.querySelector("#header nav");
 const toggle = document.querySelectorAll("nav .toggle");
 const links = document.querySelectorAll("nav ul li a");
-const header = document.querySelector("#header");
-const navHight = header.offsetHeight;
 
 function showMenu(element, action) {
   element.addEventListener("click", function () {
@@ -22,12 +20,30 @@ for (const element of links) {
   showMenu(element, "remove");
 }
 
-window.addEventListener("scroll", function () {
+function changeHeaderWhenScroll() {
+  const header = document.querySelector("#header");
+  const navHight = header.offsetHeight;
+
   if (window.scrollY >= navHight) {
     header.classList.add("scroll");
   } else {
     header.classList.remove("scroll");
   }
+}
+
+function backToTop() {
+  const buttonBackToTop = document.querySelector(".back-to-top");
+
+  if (this.window.scrollY >= 560) {
+    buttonBackToTop.classList.add("show");
+  } else {
+    buttonBackToTop.classList.remove("show");
+  }
+}
+
+window.addEventListener("scroll", function () {
+  changeHeaderWhenScroll();
+  backToTop();
 });
 
 // Testimonials slider - swiper
@@ -57,8 +73,9 @@ scrollReveal.reveal(
 #home .image, #home .text,
  #about .image, #about .text,
 #services header, #services .card,
-#testimonials header, #testimonials .testimony,
-#contact .text, #contact .links
+#testimonials header, #testimonials .swiper-wrapper,
+#contact .text, #contact .links,
+footer .brand, footer .social
 `,
   { interval: 100 }
 );
