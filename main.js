@@ -58,6 +58,12 @@ const swiper = new Swiper(".swiper", {
     type: "bullets",
     clickable: true,
   },
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true,
+    },
+  },
 });
 
 // Scroll Reveal
