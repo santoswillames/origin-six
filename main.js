@@ -20,10 +20,9 @@ for (const element of links) {
   showMenu(element, "remove");
 }
 
+const header = document.querySelector("#header");
+const navHight = header.offsetHeight;
 function changeHeaderWhenScroll() {
-  const header = document.querySelector("#header");
-  const navHight = header.offsetHeight;
-
   if (window.scrollY >= navHight) {
     header.classList.add("scroll");
   } else {
@@ -31,9 +30,8 @@ function changeHeaderWhenScroll() {
   }
 }
 
+const buttonBackToTop = document.querySelector(".back-to-top");
 function backToTop() {
-  const buttonBackToTop = document.querySelector(".back-to-top");
-
   if (this.window.scrollY >= 560) {
     buttonBackToTop.classList.add("show");
   } else {
@@ -41,9 +39,34 @@ function backToTop() {
   }
 }
 
+const sections = document.querySelectorAll("section[id]");
+function ativateMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4;
+
+  for (const section of sections) {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute("id");
+
+    const checkpointStart = checkpoint >= sectionTop;
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight;
+
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector("nav ul li a[href*=" + sectionId + "]")
+        .classList.add("active");
+    } else {
+      document
+        .querySelector("nav ul li a[href*=" + sectionId + "]")
+        .classList.remove("active");
+    }
+  }
+}
+
 window.addEventListener("scroll", function () {
   changeHeaderWhenScroll();
   backToTop();
+  ativateMenuAtCurrentSection();
 });
 
 // Testimonials slider - swiper
